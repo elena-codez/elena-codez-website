@@ -32,7 +32,7 @@ jobs:
           command: |
             python3 -m venv venv
             . venv/bin/activate
-            pip install -r elena_codez/requirements/base.txt
+            pip install -r elena_codez/requirements/base.txt elena_codez/requirements/dev.txt
 
       - save_cache:
           paths:
@@ -46,6 +46,8 @@ jobs:
       # https://nose.readthedocs.io
       - run:
           name: run tests
+          environment:
+            - DJANGO_SETTINGS_MODULE=config.settings.test
           command: |
             . venv/bin/activate
             python elena_codez/manage.py test
