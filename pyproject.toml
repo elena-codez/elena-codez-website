@@ -1,7 +1,7 @@
 # Black configuration
 
 [tool.black]
-line-length = 88
+line-length = 119
 py36 = true
 include = '\.pyi?$'
 exclude = '''
@@ -16,4 +16,5 @@ exclude = '''
   | buck-out
   | build
   | dist
+)/
 '''

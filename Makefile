@@ -13,4 +13,8 @@ stop:
 debug:
 	docker-compose up
 
+lint:
+	flake8 elena_codez/
+	black --check elena_codez/
+
 .PHONY=build
