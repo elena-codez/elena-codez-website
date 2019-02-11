@@ -1,1 +1,1 @@
--r requirements/base.txt
+-r elena_codez/requirements/base.txt
