@@ -47,7 +47,7 @@ jobs:
       - run:
           name: run tests
           environment:
-            - DJANGO_SETTINGS_MODULE=config.settings.test
+            DJANGO_SETTINGS_MODULE: config.settings.test
           command: |
             . venv/bin/activate
             python elena_codez/manage.py test
