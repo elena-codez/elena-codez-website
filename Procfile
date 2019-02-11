@@ -1,1 +1,1 @@
-web: gunicorn elena_codez.wsgi
+web: gunicorn elena_codez.config.wsgi
