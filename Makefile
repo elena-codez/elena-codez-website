@@ -17,4 +17,7 @@ lint:
 	flake8 elena_codez/
 	black --check elena_codez/
 
+format:
+	black elena_codez/
+
 .PHONY=build
