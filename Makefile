@@ -20,4 +20,7 @@ lint:
 format:
 	black elena_codez/
 
+test:
+	pytest elena_codez/ --ds=config.settings.test
+
 .PHONY=build

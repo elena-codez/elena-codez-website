@@ -18,10 +18,20 @@ services:
     ports:
       - "8000:8000"
     volumes:
-      - static_volume:/static
+      - ./elena_codez:/elena_codez
+      - static_volume:/elena_codez/static
     environment:
       - DJANGO_SETTINGS_MODULE=${DJANGO_SETTINGS_MODULE}
       - DJANGO_SECRET_KEY=${DJANGO_SECRET_KEY}
+
+  nginx:
+    build: ./nginx
+    volumes:
+      - static_volume:/elena_codez/static
+    ports:
+      - "1337:80"
+    depends_on:
+      - web
 
 volumes:
   static_volume:
