@@ -42,6 +42,7 @@ jobs:
       - run:
           name: lint
           command: |
+            . venv/bin/activate
             make lint
 
       # run tests!
