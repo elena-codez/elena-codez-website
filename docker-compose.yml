@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+  # db:
+  #   hostname: db
+  #   image: postgres:11.1
+  #   restart: always
+  #   volumes:
+  #     - db_volume:/var/lib/postresql/data
+  #   environment:
+  #     - POSTGRES_USER=${POSTGRES_USER}
+  #     - POSTGRES_PASSWORD={$POSTGRES_PASSWORD}
+  
+  web:
+    hostname: web
+    build: ./elena_codez
+    restart: always
+    ports:
+      - "8000:8000"
+    volumes:
+      - static_volume:/static
+    environment:
+      - DJANGO_SETTINGS_MODULE=${DJANGO_SETTINGS_MODULE}
+      - DJANGO_SECRET_KEY=${DJANGO_SECRET_KEY}
+
+volumes:
+  static_volume:
