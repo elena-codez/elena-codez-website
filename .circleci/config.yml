@@ -32,7 +32,7 @@ jobs:
           command: |
             python3 -m venv venv
             . venv/bin/activate
-            pip install -r elena_codez/requirements/base.txt elena_codez/requirements/dev.txt
+            pip install -r elena_codez/requirements/base.txt -r elena_codez/requirements/dev.txt
 
       - save_cache:
           paths:
