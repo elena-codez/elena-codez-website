@@ -1,1 +1,1 @@
-web: gunicorn elena_codez.config.wsgi
+web: sh -c 'cd elena_codez/ && gunicorn config.wsgi:application'
